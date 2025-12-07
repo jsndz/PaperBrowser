@@ -1,0 +1,15 @@
+Lets start with tokenizing 
+take a string and produce tokens
+
+we have convert 
+`<p>Hello This should render a paragraph</p>`
+this to general form 
+
+So the idea is to make objects
+
+TOken is an object with some properties
+
+Token{
+    type string
+    content string
+}
