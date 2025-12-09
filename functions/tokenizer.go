@@ -20,7 +20,6 @@ func Tokenizer(html string) []Token {
 	for index, ch := range html {
 		fmt.Println(string(ch))
 		if ch == '<' {
-
 			if isContent && content != "" {
 				tokens = append(tokens, Token{Type: "Text", Content: content})
 				content = ""
@@ -32,7 +31,6 @@ func Tokenizer(html string) []Token {
 			} else {
 				isTag = true
 			}
-
 		}
 		if ch == '>' {
 			if isTag {

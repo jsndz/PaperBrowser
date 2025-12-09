@@ -1,0 +1,11 @@
+Creating  a DOM:
+
+    Take all tokens -> convert it to Tree
+
+Using STACK,
+ we create a STACK then Then push Node to it if it is a Tag 
+ type Node struct {
+	Element string
+	Type    string
+}
+
