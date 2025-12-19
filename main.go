@@ -12,4 +12,7 @@ func main() {
 	fmt.Println("Hello, World!")
 	tokens := functions.Tokenizer(html)
 	fmt.Println(tokens)
+	dom := functions.CreateDOM(tokens)
+	functions.PrintDOM(dom.Root, 0)
+
 }

@@ -5,8 +5,8 @@ import (
 )
 
 type Token struct {
-	Type string
-
+	Type    string
+	Tag     string
 	Content string
 }
 
@@ -18,7 +18,6 @@ func Tokenizer(html string) []Token {
 	var content string
 	var isClosingTag bool
 	for index, ch := range html {
-		fmt.Println(string(ch))
 		if ch == '<' {
 			if isContent && content != "" {
 				tokens = append(tokens, Token{Type: "Text", Content: content})
@@ -37,13 +36,11 @@ func Tokenizer(html string) []Token {
 				tokens = append(tokens, Token{Type: "startTag", Content: tag})
 				isTag = false
 				tag = ""
-				fmt.Println(tokens)
 			}
 			if isClosingTag {
 				tokens = append(tokens, Token{Type: "endTag", Content: tag})
 				tag = ""
 				isClosingTag = false
-				fmt.Println(tokens)
 			}
 			if index+1 < len(html) && html[index+1] != '<' {
 				isContent = true
