@@ -62,7 +62,7 @@ For the Version 1,
 
 
 
-🚀 Vision
+ Vision
 
 PaperBrowser starts very small.
 Every new feature must teach one new rendering principle.

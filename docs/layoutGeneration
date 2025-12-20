@@ -1,0 +1,12 @@
+Layout generation is the process of converting the DOM to instruction for painter
+
+It provides instruction for painter in the following format
+
+```golang
+type PaintInstruction struct {
+	CursorX  int
+	CursorY  int
+	Function string
+	Content  string
+}
+```

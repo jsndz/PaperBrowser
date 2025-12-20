@@ -14,5 +14,7 @@ func main() {
 	fmt.Println(tokens)
 	dom := functions.CreateDOM(tokens)
 	functions.PrintDOM(dom.Root, 0)
-
+	instructions := []*functions.PaintInstruction{}
+	functions.LayoutGeneration(dom.Root, &instructions, &functions.State{CursorX: 0, CursorY: 0})
+	functions.PrintLayout(&instructions)
 }
