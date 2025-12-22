@@ -20,8 +20,8 @@ func LayoutGeneration(node *Node, instructions *[]*PaintInstruction, state *Stat
 	}
 	switch node.Tag {
 	case "p":
-		state.CursorX += 1
-		state.CursorY += 1
+		state.CursorX += 10
+		state.CursorY += 10
 	}
 
 	if node.Text != "" {

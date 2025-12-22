@@ -17,4 +17,5 @@ func main() {
 	instructions := []*functions.PaintInstruction{}
 	functions.LayoutGeneration(dom.Root, &instructions, &functions.State{CursorX: 0, CursorY: 0})
 	functions.PrintLayout(&instructions)
+	functions.Paint(&instructions)
 }
